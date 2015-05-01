@@ -1,1 +1,48 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
+
+.header {
+  
+}
+
+table {
+    background-color: ##FFFFCC;
+    text-align:center;
+}
+
+p {
+    margin-left:25%;
+    margin-right:25%;
+}
+
+.square{
+    width:100px;
+    height:100px;
+}
+
+.v{
+    border-left:3px solid #FF3399;
+    border-right:3px solid #FF3399;
+}
+
+.h{
+    border-top:3px solid #FF3399;
+    border-bottom:3px solid #FF3399;
+}
+
+#game{
+    text-align:center;
+}
+
+#board {
+    display: inline-block;
+    margin-top:2%;
+
+}
+
+/*.invisible {
+    visibility:hidden;
+}
+
+.visible {
+    visibility:visible;
+}*/
