@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Author" content="Gwen Tuzibun">
+	<meta name="Key Words" content="Game, Tic Tac Toe">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<title>3 in a Row</title>
+
   <link rel="stylesheet" href="style.css">
-  <title>3 in a Row</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+
 </head>
 <body>
 
-<div id = "game">
- <div id = "board">
-	        <table>
-	          <tr id="row1">
-	            <td id=1 class="square"></td>
-	            <td id=2 class="square v"></td>
-	            <td id=3 class="square"></td>
-	          </tr>
-	          <tr id="row2">
-	            <td id=4 class="square h"></td>
-	            <td id=5 class="square v h"></td>
-	            <td id=6 class="square h"></td>
-	          </tr>
-	          <tr id="row3">
-	            <td id=7 class="square"></td>
-	            <td id=8 class="square v"></td>
-	            <td id=9 class="square"></td>
-	          </tr>
-	        </table>
-	      </div>		  
-	</div>
-</div>
+	<header class="header">
+		<h1>3 in a Row</h1>
+	</header>
+	<br><hr><br> 
 
-<div style="text-align:center;">
-	<button class="invisible" id="newGame">New game!</button>
-</div>
+	<div class="container-main">
 
-<script src="tic_tac_toe.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <div class="modal fade" id="endGameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                    <p class="winning-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p class="play-instruction">Click on an empty grid square to place your token</p>
+        </div>
+
+        <div class="alert">
+            <p class="alert-text">Please choose an empty square.</p>
+        </div>
+
+        <div id="gameArea">
+            <table>
+                <tr>
+                    <td class="gameSquare" id="gameSquare1"></td>
+                    <td class="gameSquare" id="gameSquare2"></td>
+                    <td class="gameSquare" id="gameSquare3"></td>
+                </tr>
+                <tr>
+                    <td class="gameSquare" id="gameSquare4"></td>
+                    <td class="gameSquare" id="gameSquare5"></td>
+                    <td class="gameSquare" id="gameSquare6"></td>
+                </tr>
+                <tr>
+                    <td class="gameSquare" id="gameSquare7"></td>
+                    <td class="gameSquare" id="gameSquare8"></td>
+                    <td class="gameSquare" id="gameSquare9"></td>
+                </tr>
+            </table>
+		</div>
+		<div class="choose-side">
+            <div class="subtitle" id=chooseSide>
+                <div class="subtitle-text">
+                <h2 class="subtitle--large">Get Ready to Play!</h2>
+                <h2 class="subtitle--small">Choose your Side</h2> 
+                </div>
+                <div class="button-container">
+                    <button class="btn btn-primary btn-chooseside chooseSideX" id="chooseSideX"><img class="btn-chooseside_icon" src="./images/close.png" alt="Cross"></button>
+                    <button class="btn btn-primary btn-chooseside chooseSideO" id="chooseSideO"><img class="btn-chooseside_icon" src="./images/rec.png" alt="Nought"></button>
+                </div>
+            </div>
+        </div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-success btn-modal"  id="play-again">Play Again</button>
+			<button type="button" class="btn btn-secondary btn-modal" data-dismiss="modal">Close</button>
+		</div>
+      
+    </div>
+	
+	<br><hr><br> 
+	<footer class="footer">
+		&copy;2020 - Gwen Tuzibun - github.com/Tuzibun | Tic Tac Toe
+	</footer>
+	
+	<script type="text/javascript" src="tic_tac_toe.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 </body>
 </html>
