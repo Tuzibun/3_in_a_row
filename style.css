@@ -1,48 +1,182 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
 
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 800% 600%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .header {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: white;
+    font-size: large;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
   
-}
-
-table {
-    background-color: ##FFFFCC;
-    text-align:center;
-}
-
-p {
-    margin-left:25%;
-    margin-right:25%;
-}
-
-.square{
-    width:100px;
-    height:100px;
-}
-
-.v{
-    border-left:3px solid #FF3399;
-    border-right:3px solid #FF3399;
-}
-
-.h{
-    border-top:3px solid #FF3399;
-    border-bottom:3px solid #FF3399;
-}
-
-#game{
-    text-align:center;
-}
-
-#board {
-    display: inline-block;
-    margin-top:2%;
-
-}
-
-/*.invisible {
-    visibility:hidden;
-}
-
-.visible {
-    visibility:visible;
-}*/
+  .container-main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  
+  .subtitle {
+    margin: 1em 0 .6em 0;
+    font-size: 1.5rem;
+  }
+  
+  @media (min-width: 700px) {
+    .subtitle {
+      font-size: 1.7rem;
+    }
+  }
+  
+  .subtitle--small {
+    font-size: 1.4rem;
+    margin-top: .5em;
+  }
+  
+  .subtitle--large {
+    font-size: 1.7rem;
+    margin-top: .5em;
+  }
+  
+  .alert {
+    height: 2rem;
+    padding: 0;
+    margin-bottom: .4em;
+  }
+  
+  .alert-text {
+    font-size: 1.3rem;
+    color: red;
+    display: none;
+  }
+  
+  .play-instruction {
+    font-size: 1.5rem;
+    text-align: center;
+    display: none;
+    margin-top: 2em;
+  }
+  
+  #winningText {
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+  }
+  
+  .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .btn-chooseside {
+    height: 1.7em;
+    width: 4.5em;
+    margin: 1em 1em 0 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .btn-chooseside_icon {
+    width: 17px;
+    height: 17px;
+    pointer-events: none;
+  }
+  
+  #gameArea {
+    margin: 0 auto 2.5em auto;
+    width: 316px;
+    height: 316px;
+    padding: 0px;
+    background-color: #00c3ff;
+    pointer-events: none;
+  }
+  
+  .gameSquare {
+    padding: .5em;
+  }
+  
+  .gameSquare_icon {
+    pointer-events: none;
+  }
+  
+  table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+  }
+  
+  tr {
+    max-height: 100px;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  td {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #240f4b;
+    padding: .3em;
+    margin: 0px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  /*# sourceMappingURL=style.css.map */
